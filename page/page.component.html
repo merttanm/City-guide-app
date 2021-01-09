@@ -1,0 +1,24 @@
+<ActionBar title="Page" class="action-bar">
+
+    <Button text="Назад" (tap)="onButtonTap()" class="-outline -rounded-sm"
+        style="color: ffffff" horizontalAlignment="left"></Button>
+
+</ActionBar>
+
+<ScrollView class=" page">
+    <StackLayout class="second-panel">
+        <Image [src]="Facts.icon_url" class="img">
+        </Image>
+        <TextView editable="false">
+            <Label text="Факт"></Label>
+            <FormattedString>
+                <Span [text]="Facts.value">
+                </Span>
+
+            </FormattedString>
+        </TextView>
+
+
+
+    </StackLayout>
+</ScrollView>

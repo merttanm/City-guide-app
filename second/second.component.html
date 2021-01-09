@@ -1,0 +1,25 @@
+<ActionBar title="Bir Kategori Seçin">
+</ActionBar>
+
+<GridLayout>
+    <ScrollView>
+        <StackLayout class="second-panel">
+            <!--Add your page content here-->
+            <!--  <Label text="bir kategori seçin"></Label> -->
+            <ListView [items]="facts" (itemTap)="onItemTap($event)"
+                style="height:1250px">
+                <ng-template let-fact="item">
+                    <FlexboxLayout flexDirection="row"
+                        [nsRouterLink]="['/page', fact]">
+                        <Label [text]="fact" class="t-12"
+                            backgroundColor="#b3b7bd" fontSize="25"
+                            style="height:1250px" verticalAlignment="Stretch"
+                            style="width: 100%">
+                        </Label>
+                    </FlexboxLayout>
+                </ng-template>
+            </ListView>
+
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
